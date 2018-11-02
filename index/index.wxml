@@ -1,0 +1,5 @@
+<navbar back home text="{{navigationBarTitle}}"></navbar>
+
+<view class='main' style="{{'top:' + navigationBarHeight}}">
+  <text>Hello Wechat!</text>
+</view>

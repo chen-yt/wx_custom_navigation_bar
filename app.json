@@ -1,0 +1,9 @@
+{
+  "pages":[
+    "index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationStyle": "custom"
+  }
+}
