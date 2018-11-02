@@ -4,3 +4,7 @@
 <p align="center">作者：chen-yt</p>
 
 ## 截图
+<img src="./screenshot/iphone_6_demo_2.png" width="24%"></img>
+<img src="./screenshot/iphone_x_demo_2.png" width="24%"></img>
+<img src="./screenshot/iphone_6_demo.png" width="24%"></img>
+<img src="./screenshot/iphone_x_demo.png" width="24%"></img>
