@@ -1,53 +1,46 @@
 .navbar {
-  width: 100vw;
-  background-color: #2f2f2f;
   position: fixed;
-  z-index: 4;
-}
-
-.title-container {
-  height: 44px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.capsule {
-  margin-left: 10px;
-  height: 32px;
-  border: 1px solid #777;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.capsule > view {
-  width: 32px;
-  height: 60%;
-  position: relative;
-}
-
-.capsule > view:nth-child(2) {
-  border-left: 1px solid #777;  
-}
-
-.capsule image {
-  width: 60%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 
 .title {
-  color: white;
   position: absolute;
+  bottom: 22px;
   left: 104px;
   right: 104px;
+  transform: translateY(50%);
   font-size: 14px;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.capsule {
+  position: absolute;
+  left: 16px;
+  bottom: 22px;
+  transform: translateY(50%);
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.capsule > image {
+  width: 20px;
+  height: 20px;
+}
+
+.capsule > image:nth-child(2) {
+  margin-left: 12px;
+}
+
+.page {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

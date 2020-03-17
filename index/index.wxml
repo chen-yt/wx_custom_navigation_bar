@@ -1,5 +1,15 @@
-<navbar back home text="{{navigationBarTitle}}"></navbar>
-
-<view class='main' style="{{'top:' + navigationBarHeight}}">
-  <text>Hello Wechat!</text>
-</view>
+<navbar
+  back="{{isShowBack}}"
+  home="{{isShowHome}}"
+  title="{{title}}"
+  titleColor="{{titleColor}}"
+  background="{{background}}"
+  bindback="onBack"
+  bindhome="onHome"
+>
+  <button bindtap="changeTitle">点我改变标题</button>
+  <button bindtap="changeBackground">点我改变导航栏颜色</button>
+  <button bindtap="changeColor">点我改变标题颜色</button>
+  <button bindtap="changeBackBtn">点我{{isShowBack ? '隐藏' : '显示'}}返回键</button>
+  <button bindtap="changeHomeBtn">点我{{isShowHome ? '隐藏' : '显示'}}home键</button>
+</navbar>

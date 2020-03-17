@@ -1,12 +1,8 @@
-const app = getApp()
+const navBarHeight = wx.getSystemInfoSync().statusBarHeight + 44
 
 Component({
 
   properties: {
-    text: {
-      type: String,
-      value: 'Wechat'
-    },
     back: {
       type: Boolean,
       value: false
@@ -14,24 +10,42 @@ Component({
     home: {
       type: Boolean,
       value: false
+    },
+    title: {
+      type: String,
+      value: 'Wechat'
+    },
+    titleColor: {
+      type: String,
+      value: '#ffffff'
+    },
+    background: {
+      type: String,
+      value: '#2f2f2f'
     }
   },
 
   data: {
-    statusBarHeight: app.statusBarHeight + 'px',
-    navigationBarHeight: (app.statusBarHeight + 44) + 'px'
+    navBarHeight
   },
 
   methods: {
-    backHome: function () {
+    home() {
+      this.triggerEvent('home')
       wx.reLaunch({
-        url: '../index/index',
+        url: '/index/index'
       })
     },
-    back: function () {
-      wx.navigateBack({
-        delta: 1
-      })
+
+    back() {
+      this.triggerEvent('back')
+      if (getCurrentPages().length === 1) {
+        wx.redirectTo({
+          url: '/index/index'
+        })
+      } else {
+        wx.navigateBack()
+      }
     }
   }
 })
